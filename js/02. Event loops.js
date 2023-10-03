@@ -26,7 +26,8 @@ console.log(start)
 function count() {
 
   // do a heavy job
-  for (let j = 0; j < 10; j++) {
+  console.log(1e9);
+  for (let j = 0; j < 1e9; j++) {
     i++;
   }
 
