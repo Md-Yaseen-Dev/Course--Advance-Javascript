@@ -58,14 +58,6 @@ function curry(func){
     }
 }
 
-function sum(a,b,c){
-
-    return a+b+c;
-}
-let curriedsum = curry(sum);
-
-console.log(curriedsum(1,2,4));
-
-
 // The new curry may look complicated but it's actually easy to understand.
 
+                                                                                                                                                                                                                           
