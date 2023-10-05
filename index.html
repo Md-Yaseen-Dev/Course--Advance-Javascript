@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  event loop -->
+    <div id="progress"></div>
+
+    <script>
+      let a= 0;
+    
+      function county() {
+    
+        // do a piece of the heavy job (*)
+        do {
+          a++;
+          progress.innerHTML = a;
+        } while (a% 1e3 != 0);
+    
+        if (a < 1e7) {
+          setTimeout(county);
+        }
+    
+      }
+    
+      county();
+    </script>
+
+    <script src="./js/02. Event loops.js"></script>
+</body>
+</html>
