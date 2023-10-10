@@ -179,3 +179,50 @@ console.log(pow(2,3))
 
 // Recursion can give a shorter code, easier to understand and support. Optimizations are not required in every place, mostly we need a good code, that’s why it’s used.
 
+
+
+// ?! Recursive traversals
+
+//  Another great application of the recursion is a recursion traversal
+
+//  Imagine, we have a company. The staff structure can be presented as an object.
+
+// In other worda a company has deparments
+
+//  1. A department may have an array of staff. for instance, sales department has 2 employees john and Alice.
+
+//  2. Or a department may split into subdepartments, like development has two branches sites and interals. Each of them has their own staff.
+
+//  It is also possibel that when subdepartment growsm it divdes into subsubdepartements
+
+// For instance, the sites department in the future may be split into teams for siteA and siteB . And they potentially can split even more. That's not  on the picture, just something to have in mind.
+
+
+let company = { // the same object, compressed for brevity
+
+    sales:[{nane : "john", salary:1000}, {name: "Alice", salary :1600}],
+
+    development : {
+        sites : [{name:"peter", salary:2000}, {name: "Alex", salary:100}],
+        internals: [{name:"jack", salary:1300}]
+    }
+};
+
+//  the function to do the job
+
+function sumSalaries(department){
+
+    if(Array.isArray(department)){
+
+        return department.reduce((prev, current) =>  prev + current.salary, 0);
+    
+    }
+    else { // case (2)
+        let sum = 0;
+        for (let subdep of Object.values(department)) {
+          sum += sumSalaries(subdep); // recursively call for subdepartments, sum the results
+        }
+        return sum;
+}}
+
+console.log(sumSalaries(company))
