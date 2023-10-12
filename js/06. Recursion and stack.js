@@ -212,9 +212,11 @@ let company = { // the same object, compressed for brevity
 
 function sumSalaries(department){
 
+
+    // console.log(department)
     if(Array.isArray(department)){
 
-        return department.reduce((prev, current) =>  prev + current.salary, 0);
+        console.log( department.reduce((prev, current) =>  prev + current.salary, 0));
     
     }
     else { // case (2)
@@ -223,6 +225,7 @@ function sumSalaries(department){
           sum += sumSalaries(subdep); // recursively call for subdepartments, sum the results
         }
         return sum;
-}}
+}
+}
 
 console.log(sumSalaries(company))
