@@ -54,7 +54,7 @@ weakmap1.set(smith,"...");
 smith = null;
 
 
-//Note:-mpare it with the regular Map example above. Now if john only exists as the key of WeakMap – it will be automatically deleted from the map (and memory).
+//Note:-compare it with the regular Map example above. Now if john only exists as the key of WeakMap – it will be automatically deleted from the map (and memory).
 
 // WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
 
