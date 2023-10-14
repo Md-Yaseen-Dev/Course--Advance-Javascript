@@ -69,3 +69,39 @@ JavaScript engines also may optimize it, discard variables that are unused to sa
  */
 
 
+
+
+//  ----Returning a function
+
+function makeCounter() {
+    let count = 0;
+  
+    return function() {
+      return count++;
+    };
+  }
+  
+  let counter = makeCounter();
+
+  console.log(counter())
+  console.log(counter())
+  console.log(counter())
+  console.log(counter())
+  console.log(counter())
+
+
+//   here is a general programming term “closure”, that developers generally should know.
+
+
+// ? --Closure
+// A closure is a funct
+
+function f() {
+    let value = Math.random();
+  
+    return function() { console.log(value); };
+  }
+  
+  // 3 functions in array, every one of them links to Lexical Environment
+  // from the corresponding f() run
+  let arr = [f(), f(), f()];
