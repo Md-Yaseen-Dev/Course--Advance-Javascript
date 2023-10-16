@@ -15,7 +15,9 @@ console.log("hello");
 
 var gVar =10;
 
+console.log(globalThis.gVar);
 console.log(window.gVar);
+
 
 
 // If we used let instead, such thing wouldn’t happen:
