@@ -14,3 +14,6 @@
 * `06. Recursion and stack ` -> <u> [Click-Here](./js/06.%20Recursion%20and%20stack.js) </u>
 
 * `07. Rest parameters and spread parameters ` -> <u> [Click-Here](./js/07.%20Rest%20parameters%20and%20spread%20syntax.js) </u>
+
+
+* `08. Closures` -> <u> [click-Here](./js/08.%20Closure.js)
