@@ -100,3 +100,46 @@ function ask(question, ...handlers) {
   // for positive answer, both handlers are called
   // for negative answer, only the second one
 //   console.log(ask("Question?", () => ('You said yes'), result =>(result)));
+
+
+// Custom properties
+// We can also add properties of our own.
+
+// Here we add the counter property to track the total calls count:
+
+function sayHi() {
+  console.log("Hi");
+
+  // let's count how many times we run
+  sayHi.counter++;
+}
+sayHi.counter = 4; // initial value
+
+sayHi(); // Hi
+sayHi(); // Hi
+
+console.log( `Called ${sayHi.counter} times` ); // Called 2 times
+
+
+// The count is now stored in the function directly, not in its outer Lexical Environment.
+
+// Is it better or worse than using a closure?
+
+// The main difference is that if the value of count lives in an outer variable, then external code is unable to access it. Only nested functions may modify it. And if it’s bound to a function, then such a thing is possible:
+
+function makeCounter() {
+
+  function counter() {
+    return counter.count++;
+  };
+
+  counter.count = 0;
+
+  return counter;
+}
+
+let counter = makeCounter();
+
+counter.count = 10;
+console.log( counter() ); // 10
+// So the choice of implementation depends on our aims.
