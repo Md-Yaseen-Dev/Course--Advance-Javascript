@@ -143,3 +143,91 @@ let counter = makeCounter();
 counter.count = 10;
 console.log( counter() ); // 10
 // So the choice of implementation depends on our aims.
+
+// Named function expression
+
+// Named function expression or NFE is a term for function expression that have a name
+
+// For instance, let's take an ordinary function expression
+
+let sayHIm = function(who){
+  console.log(`hello ,${who}`)
+}
+
+sayHIm("yaseen");
+
+// Did we achieve anything here? what is the purpose of that additioinal func name
+
+// first lets not e that we still have a function expression. adding the name func after function did not make it a function declaration. because it is still created as a part of an assignmnet expression.
+
+// Adding such a name also did not brak anything
+
+// the function is still available as sayHI();
+
+
+let sayHil = function func(who) {
+  console.log(`Hello, ${who}`);
+};
+
+sayHil("John");
+
+//  There are two special things about the name func, that are the reasons for it.
+
+//1. it allows the function to refernce itself internally
+
+// 2. It is not visible outside of the function.
+
+let hello_guest = function func(who) {
+  if (who) {
+    console.log(`Hello, ${who}`);
+  } else {
+    func("Guest"); // use func to re-call itself
+  }
+};
+
+hello_guest(); // Hello, Guest
+
+// But this won't work:// Error, func is not defined (not visible outside of the function)
+
+
+
+// error
+
+// let sayHi_error = function(who) {
+//   if (who) {
+//     alert(`Hello, ${who}`);
+//   } else {
+//     sayHi_error("Guest"); // Error: sayHi is not a function
+//   }
+// };
+
+// let welcome1 = sayHi;
+// sayHi = null;
+
+// welcome1();
+// ---------
+
+let says = function func(who) {
+  if (who) {
+    console.log(`Hello, ${who}`);
+  } else {
+    func("Guesty"); // Now all fine
+  }
+};
+
+let welcome = says;
+says = null;
+
+welcome(); // Hello, Guest (nested call works)
+
+
+//  There is nos uch thing gor function declaration
+
+// The internal name feature described here is only available for function expressions , not for function declarations. for function declarations, there is no syntax for adding an internal name.
+// Sometimes, when we need a reliable internal name, it is the reason to rewrite a function declaration to named function expression form
+
+
+function sum(){
+
+  
+}
