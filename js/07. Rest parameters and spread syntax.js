@@ -59,7 +59,7 @@ function showName(fName, lName, ...titles){
 showName("yaseen", "Roshan", "Roy", "waheed", "Fazil");
 
 
-// ? IMp   The rest parameters gather all remaining arguments, so the following deos not makes sense and causes an error.
+// ? IMp   The rest parameters gather all remaining arguments, so the following does not makes sense and causes an error.
 
 // function f(args1, ...rest, arg2){   // arg2 after   ...rest
 
@@ -87,7 +87,7 @@ showName("yaseen", "roshan");
 
 //  In old times. rest parameters did not exist in the language, and using arguments was the only way to get all arguments of  the function. And it still works. we can find it in the old code.
 
-// But the downside is that although arguments is bothe array-like and iterable its not an array. It does not support array methods, so we can't call arguments.map(...) for example.
+// But the downside is that although arguments is both array-like and iterable its not an array. It does not support array methods, so we can't call arguments.map(...) for example.
 
 
 
@@ -113,7 +113,7 @@ showName("yaseen", "roshan");
 
 //  But sometimes we need to do exactly the reverse.
 
-//  for instance there is a built in functioin Math.max that returns the greatest number form a list.
+//  for instance there is a built in functiin Math.max that returns the greatest number form a list.
 
 
 console.log(Math.max(3,5,1)); 
