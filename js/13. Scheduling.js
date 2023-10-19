@@ -42,3 +42,71 @@ console.log(timerId); // timer identifier
 
 clearTimeout(timerId);
 console.log(timerId); // same identifer doesn't become null after cancelling
+
+
+// ? setInerval
+
+// The setInterval method has the same syntax as setTimeout:
+
+// let timerId = setInterval(func|code, [delay], [arg1], [arg2], ...)
+
+// repeat with the interval of 2 seconds
+let timerId1 = setInterval(() => console.log('tick'), 1000);
+
+// after 5 seconds stop
+setTimeout(() => { clearInterval(timerId1); console.log('stop'); }, 5000);
+
+
+// ?Nested setTimeout
+
+// There are two ways of running something regularly.
+
+// One is setInterval. The other one is a nested setTimeout, like this
+
+let timerId2 = setTimeout(function tick() {
+    console.log('tick.....some');
+    timerId2 = setTimeout(tick, 2000); // (*)
+  }, 2000);
+
+//   Nested setTimeout allows to set the delay between the executions more precisely than setInterval.
+
+
+// Garbage collection and setInterval/setTimeout callback
+// When a function is passed in setInterval/setTimeout, an internal reference is created to it and saved in the scheduler. It prevents the function from being garbage collected, even if there are no other references to it.
+
+// // the function stays in memory until the scheduler calls it
+// setTimeout(function() {...}, 100);
+// For setInterval the function stays in memory until clearInterval is called.
+
+// There’s a side effect. A function references the outer lexical environment, so, while it lives, outer variables live too. They may take much more memory than the function itself. So when we don’t need the scheduled function anymore, it’s better to cancel it, even if it’s very small.
+
+// Zero delay setTimeout
+
+// There is a special use case setTImeout(func,0) or just setTImeout(func)
+
+// This schedules the execution of func as soon as possible . But  the scheduler will invoke it only after the currently executing script is complete.
+
+
+// ?zero delay setTImeout
+
+// (func, 0), or just setTimeout(func).
+
+// // This schedules the execution of func as soon as possible. But the scheduler will invoke it only after the currently executing script is complete.
+
+// // So the function is scheduled to run “right after” the current script.
+
+// For instance, this outputs “Hello”, then immediately “World”:
+
+setTimeout(() => console.log("World"));
+
+console.log("Hello");
+// The first line “puts the call into calendar after 0ms”. But the scheduler will only “check the calendar” after the current script is complete, so "Hello" is first, and "World" – after it.
+
+// There are also advanced browser-related use cases of zero-delay timeout, that we’ll discuss in the chapter Event loop: microtasks and macrotasks.
+
+// NOTe:-   setTimeout(func, delay, ...args) and setInterval(func, delay, ...args) allow us to run the func once/regularly after delay milliseconds.
+// To cancel the execution, we should call clearTimeout/clearInterval with the value returned by setTimeout/setInterval.
+// Nested setTimeout calls are a more flexible alternative to setInterval, allowing us to set the time between executions more precisely.
+// Zero delay scheduling with setTimeout(func, 0) (the same as setTimeout(func)) is used to schedule the call “as soon as possible, but after the current script is complete”.
+// The browser limits the minimal delay for five or more nested calls of setTimeout or for setInterval (after 5th call) to 4ms. That’s for historical reasons.
+// Please note that all scheduling methods do not
