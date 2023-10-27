@@ -6,7 +6,7 @@
 //2. setInterval allows us to run function repeatedly, strating after the interval of time, then repeating continously at that interval.
 
 
-// ? setTimeout
+// ---------------------------------------? setTimeout---------------------------------------------------------------
 
 // let timerId = setTImeout(func|code, [delay], [arg1], [arg2], ...)
 
@@ -44,7 +44,7 @@ clearTimeout(timerId);
 console.log(timerId); // same identifer doesn't become null after cancelling
 
 
-// ? setInerval
+// ---------------------------------------------? setInerval-----------------------------------------------------------------------------------
 
 // The setInterval method has the same syntax as setTimeout:
 
@@ -76,11 +76,12 @@ let timerId2 = setTimeout(function tick() {
 
 // // the function stays in memory until the scheduler calls it
 // setTimeout(function() {...}, 100);
-// For setInterval the function stays in memory until clearInterval is called.
+
+// ----- [  For setInterval the function stays in memory until clearInterval is called.  ]-----
 
 // There’s a side effect. A function references the outer lexical environment, so, while it lives, outer variables live too. They may take much more memory than the function itself. So when we don’t need the scheduled function anymore, it’s better to cancel it, even if it’s very small.
 
-// Zero delay setTimeout
+//  ? ------------------------------------------------------Zero delay setTimeout --------------------------------------------------[4]
 
 // There is a special use case setTImeout(func,0) or just setTImeout(func)
 
