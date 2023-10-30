@@ -17,3 +17,19 @@
 
 
 * `08. Closures` -> <u> [click-Here](./js/08.%20Closure.js)
+
+* `09. Var` -> <u> [click-Here](./js/09.%20Var.js)
+
+* `10. Global Object` -> <u> [click-Here](./js/10.%20Global%20object.js)
+
+* `11. Function object` -> <u> [click-Here](./js/11.%20Function%20object.js)
+
+* `12. New function` -> <u> [click-Here](./js/12.%20New%20function.js)
+
+* `13. Scheduling` -> <u> [click-Here](./js/13.%20Scheduling.js)
+
+* `13. callback` -> <u> [click-Here](./js/14.%20Callback.js)
+
+* `13. Promise` -> <u> [click-Here](./js/15.%20Promise.js)
+
+
