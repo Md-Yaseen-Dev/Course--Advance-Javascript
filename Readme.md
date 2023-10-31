@@ -28,8 +28,8 @@
 
 * `13. Scheduling` -> <u> [click-Here](./js/13.%20Scheduling.js)
 
-* `13. callback` -> <u> [click-Here](./js/14.%20Callback.js)
+* `14. callback` -> <u> [click-Here](./js/14.%20Callback.js)
 
-* `13. Promise` -> <u> [click-Here](./js/15.%20Promise.js)
+* `15. Promise` -> <u> [click-Here](./js/15.%20Promise.js)
 
 
