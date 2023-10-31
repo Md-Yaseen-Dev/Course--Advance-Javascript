@@ -32,4 +32,8 @@
 
 * `15. Promise` -> <u> [click-Here](./js/15.%20Promise.js)
 
+* `16. Promise chaining` -> <u> [click-Here](./js/16.%20Promises%20chaining.js)
+
+* `17. Promises Error handling` -> <u> [click-Here](./js/17.%20Promises%20Error%20handling.js)
+
 
