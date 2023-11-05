@@ -36,4 +36,15 @@
 
 * `17. Promises Error handling` -> <u> [click-Here](./js/17.%20Promises%20Error%20handling.js)
 
+* `18. Promises API` -> <u> [click-Here](./js/18.%20Promise%20API.js)
+
+* `19. Promisification ` -> <u> [click-here](./js/19.%20Promisification.js)
+
+*  `20. Microtasks ` -> <u> [click-here](./js/20.%20Microtasks%20.js)
+
+*  `21. Async await ` -> <u> [click-here](./js/21.%20Async%20await.js)
+
+
+
+
 
